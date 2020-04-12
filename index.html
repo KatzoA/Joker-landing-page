@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>JOKER | Landing Page</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="logo.png" alt="">
+            <div class="toggle">
+                <img src="toggle.png" alt="">
+            </div>
+        </a>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2>Put on a <span>Happy </span>face</h2>
+            <p>In the 1980s, in Gotham City, Arthur Fleck, a failed stand-up comedian, was assaulted while walking the streets of the city dressed as a clown. Despised and scorned by all, he gradually goes mad and becomes the Joker, a dangerous psychotic killer.</p>
+            <a href="#" class="play" onclick="joker()">
+                <img src="play.png" alt="">Watch trailer
+            </a>
+            <div class="slide"></div>
+            <ul class="sci">
+                <li>
+                    <a href="#">
+                        <img src="facebook.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="twitter.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="instagram.png" alt="">
+                     </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="trailer">
+            <video controls>
+            <source src="joker.mp4" type="video/mp4">
+            <!-- <source src="movie.ogg" type="video/ogg"> -->
+                  Your browser does not support the video tag.
+            </video>
+        <img src="close.png" alt="" class="close" onclick="toggle()">
+    </div>
+    <script type="text/javascript">
+        function toggle(){
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause()
+        }
+
+        function joker(){
+        window.open('https://www.youtube.com/watch?v=zAGVQLHvwOY')
+        }
+    </script>
+</body>
+</html>
